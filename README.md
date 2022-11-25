@@ -1,8 +1,9 @@
 <h1>Songbird-Quiz</h1>
 <hr>
-Plain JS SPA
+Plain JS SPA<br>
 https://rolling-scopes-school.github.io/emilyright-JSFE2022Q3/songbird/dist/<br>
-![image](https://user-images.githubusercontent.com/76948537/204015919-f63bac92-3116-44b2-b971-2092bbd99c8c.png)<br>
+<img src = 'https://user-images.githubusercontent.com/76948537/204017846-5e80c6bb-4834-4702-851d-8b638263e202.png'>
+
 npm i<br>
 npm run build<br>
 npm start<br>
