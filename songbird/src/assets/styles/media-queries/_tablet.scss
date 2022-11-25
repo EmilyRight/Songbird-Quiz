@@ -1,0 +1,123 @@
+@import "../imports.scss";
+@media screen and (min-width: 768px) {
+  .variable-block {
+    width: 100%;
+  }
+  .start-page__text-block {
+    min-height: 40vh;
+    position: relative;
+    min-width: 60vw;
+  }
+  .start-page__rules {
+    width: 40rem;
+  }
+
+  .start__btn {
+    @include btn;
+    padding: 1rem 2rem;
+    min-width: 0;
+    width: 19rem;
+  }
+
+  .final-page {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .burger {
+    display: none;
+  }
+  .header__title {
+    font-size: clamp(3rem, 6vw, 8rem);
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .header__nav {
+    position: static;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0 1rem;
+    box-shadow: none;
+  }
+
+  .header__settings {
+    position: static;
+    @include text;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 0rem 0vw;
+    background-color: inherit;
+  }
+
+  .settings__item {
+    text-align: center;
+    padding-right: 1rem;
+    border-right: 1px solid $color-beige;
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  .nav__list {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .nav__item {
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .question {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-dark-green;
+    border-radius: 5px;
+  }
+  .question__next_active,
+  .question__next_inactive {
+    align-self: flex-end;
+  }
+  .answers-info {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .answers {
+    flex-shrink: 1;
+    flex-grow: 0.5;
+  }
+  .info {
+    flex-shrink: 1;
+    flex-grow: 0.5;
+    padding: 2rem;
+    background-color: #1e3a00;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .gallery-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .birds__list {
+    max-height: 20rem;
+  }
+}

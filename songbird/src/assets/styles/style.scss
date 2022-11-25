@@ -1,0 +1,66 @@
+@import "./imports.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-color: $color-light-green;
+}
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background-color: inherit;
+}
+.game {
+  width: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+.wrapper {
+  padding-left: 7vw;
+  padding-right: 7vw;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.variable-block {
+  flex: 1 1 auto;
+  padding-top: 5rem
+}
+.btn_active {
+  @include btn;
+}
+.btn_inactive {
+  @include btn_inactive;
+}
+@import "../styles/components/start-page";
+@import "../styles/components/final-page";
+@import "../styles/components/header";
+@import "../styles/components/nav";
+@import "../styles/components/questions";
+@import "../styles/components/answers";
+@import "../styles/components/info";
+@import "../styles/components/gallery";
+@import "../styles/components/footer";
+
+@import "../styles/media-queries/tablet";
+@import "../styles/media-queries/small-desktop";
+@import "../styles/media-queries/medium-desktop";
+
+.hidden {
+  display: none;
+}
