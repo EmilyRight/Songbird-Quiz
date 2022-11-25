@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Songbird</title>
+  <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header-content">
+          <h1 class="header__title">
+            Song<span class="header__title_red">Bird</span>
+          </h1>
+          <div class="header__main">
+            <div class="burger">
+              <span class="burger__icon burger__icon"></span>
+            </div>
+            <div class="header__settings">
+              <div class="settings__item rules">Правила</div>
+              <div class="settings__item back-to-start">В начало</div>
+              <div class="settings__item gallery">Галерея</div>
+              <div class="settings__item results">Рейтинг</div>
+              <div class="settings__lang">
+                <div class="nav__lang lang btn_active">EN</div>
+                <div class="nav__lang lang btn_active">RU</div>
+              </div>
+            </div>
+            <div class="start-page__rules hidden">
+              <ul class="rules__list">
+                <li class="rules__item">
+                  Для прохождения игры нужно ответить на 6 вопросов
+                </li>
+                <li class="rules__item">
+                  За каждый голос, верно угаданный с первого раза, ты получаешь 5
+                  баллов
+                </li>
+                <li class="rules__item">
+                  С каждой неверной попыткой количество баллов за вопрос
+                  уменьшается на единицу
+                </li>
+              </ul>
+              <button class="close-rules">ОК</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="variable-block">
+        <section class="start-page">
+          <div class="start-page__text-block">
+            <p class="start-page__text">
+              Часто ли тебе удается побывать в лесу, у моря или в горах?
+              Главное, что улавливает на природе наш мозг, уставший от шума
+              городов, это тишина и... пение птиц.<br />
+              Наверняка ты слышал эти звуки сотни раз, но сможешь ли ты, закрыв
+              глаза, безошибочно определить, кто для тебя поет?...
+            </p>
+          </div>
+          <button class="start__btn start">Начать игру</button>
+        </section>
+      </section>
+      <main class="game content-section hidden">
+        <section class="content-section nav-section hidden">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item nav__item_active">Разминка</li>
+              <li class="nav__item">Воробьиные</li>
+              <li class="nav__item">Лесные птицы</li>
+              <li class="nav__item">Певчие птицы</li>
+              <li class="nav__item">Хищные птицы</li>
+              <li class="nav__item">Морские птицы</li>
+            </ul>
+          </nav>
+          <div class="header__score"><span class="score-title">Счeт:</span> <span class="score">0</span></div>
+        </section>
+      </section>
+        <section class="content-section question hidden">
+          <div class="question__picture bird-picture"></div>
+          <div class="question__content">
+            <div class="question__subcontainer">
+              <div class="question__bird-name bird-name">*****</div>
+            </div>
+            <div class="question__player player">
+              <div class="player__controls">
+                <button type="button" class="question__play play__btn"></button>
+                <div class="timebar">
+                  <audio class="question__audio audio" src="#"></audio>
+                  <div class="timebar__row">
+                    <input
+                      class="timebar__row_input progress-bar"
+                      id="timebar"
+                      type="range"
+                      value="0"
+                      min="0"
+                      max="100"
+                      step="1"
+                    />
+                  </div>
+                  <div class="timebar__timer">
+                    <span class="current-time"
+                      ><span class="current-time__minutes">00</span>:<span
+                        class="current-time__seconds"
+                        >00</span
+                      ></span
+                    >
+                    <span class="end-time">00:00</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="volume">
+                <button type="button" class="volume__btn"></button>
+                <button type="button" class="arrow__btn"></button>
+                <div class="volume__bar">
+                  <input
+                    class="progress-bar volume__bar_input"
+                    id="volume-bar"
+                    type="range"
+                    value="50"
+                    min="0"
+                    max="100"
+                    step="1"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="question__next_active">Next</button>
+          <button type="button" class="question__finish_active hidden">
+            Finish
+          </button>
+        </section>
+        <section class="content-section answers-info hidden">
+          <section class="answers">
+            <ul class="answers__list">
+              <li class="answers__item">
+                <div class="answers__mark"></div>
+                <div class="answer">gg</div>
+              </li>
+              <li class="answers__item">
+                <div class="answers__mark"></div>
+                <div class="answer">gg</div>
+              </li>
+              <li class="answers__item">
+                <div class="answers__mark"></div>
+                <div class="answer">gg</div>
+              </li>
+              <li class="answers__item">
+                <div class="answers__mark"></div>
+                <div class="answer">gg</div>
+              </li>
+              <li class="answers__item">
+                <div class="answers__mark"></div>
+                <div class="answer">gg</div>
+              </li>
+              <li class="answers__item">
+                <div class="answers__mark"></div>
+                <div class="answer">gg</div>
+              </li>
+            </ul>
+            <audio
+              class="right-answer"
+              src="assets/audio/achat.mp3"
+            ></audio>
+            <audio
+              class="wrong-answer"
+              src="assets/audio/boost.mp3"
+            ></audio>
+          </section>
+          <section class="bird-info_meta">
+            <div class="bird-info__question">
+              Угадай, чей голос звучит
+            </div>
+            <div
+              class="bird-info_hidden hidden bird__picture bird-picture"
+            ></div>
+            <div class="bird-info_hidden bird-data">
+              <div class="bird__player player">
+                <audio class="bird__audio audio" src="#"></audio>
+                <div class="player__controls">
+                  <div class="bird__play play__btn"></div>
+                  <div class="timebar">
+                    <div class="timebar__row">
+                      <input
+                        class="timebar__row_input progress-bar"
+                        id="timebar-info"
+                        type="range"
+                        value="0"
+                        min="0"
+                        max="100"
+                        step="1"
+                      />
+                    </div>
+                    <div class="timebar__timer">
+                      <span class="current-time"
+                        ><span
+                          class="current-time__minutes current-time__minutes_info"
+                          >00</span
+                        >:<span
+                          class="current-time__seconds current-time__seconds_info"
+                          >00</span
+                        ></span
+                      >
+                      <span class="end-time end-time_info">00:00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class="bird-info_main hidden">
+          <div class="bird__name">Клест</div>
+          <div class="bird__name_lat">ааа аааа</div>
+          <div class="bird__description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae sit
+            corporis amet quo, et reiciendis aperiam eveniet nobis itaque
+            dignissimos possimus harum soluta excepturi iure provident
+            veritatis. Laborum, maxime dignissimos!
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__name"><a href="https://github.com/EmilyRight" target="_blank" class="footer__link footer__name">By EmilyRight</a></div>
+        <div class="footer__logo"><a href="https://rs.school/" target="_blank" class="footer__link rs-link"></a></div>
+        <div class="footer__year">2022</div>
+      </footer>
+    </div>
+  </body>
+</html>

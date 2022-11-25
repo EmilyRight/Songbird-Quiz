@@ -1,0 +1,84 @@
+@import './vars';
+@mixin text {
+  color: $color-beige;
+  font-size: clamp(14px, 1.26vw, 20px);
+}
+
+@mixin large-text {
+  color: $color-beige;
+  font-size: clamp(2.5rem, 3vw, 40px);
+}
+
+@mixin medium-text {
+  color: $color-beige;
+  font-size: clamp(2rem, 3vw, 30px);
+  font-style: italic;
+}
+
+@mixin btn {
+  @include text;
+  background-color: $color-pink;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  font-size: clamp(16px, 1.26vw, 20px);
+  &:hover {
+    background-color: $color-red;
+  }
+}
+
+@mixin btn_inactive {
+  @include text;
+  background-color: rgb(97, 92, 92);
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  font-size: clamp(16px, 1.26vw, 20px);
+}
+
+@mixin play-pause__btn ($url) {
+  display: block;
+  min-width: 4rem;
+  min-height: 4rem;
+  border-radius: 50%;
+  background-color: $color-pink;
+  background-image: url(#{$url});
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    background-image: url(#{$url});
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+    background-color: $color-pink;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.217);
+    &::after {
+      transform: scaleX(1.6) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  &:active {
+    transform: translateY(-2px);
+}
+
+}
